@@ -57,6 +57,35 @@
       line-height: 1.6;
       text-align: center;
     }
+    /* New Blog Listing Styles */
+    .posts {
+      max-width: 800px;
+      margin: 2rem auto 4rem auto;
+      padding: 0 1rem;
+    }
+    .post {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #ccc;
+    }
+    .post h3 {
+      margin: 0 0 .5rem 0;
+      font-size: 1.75rem;
+    }
+    .post small {
+      color: #777;
+    }
+    .post p {
+      line-height: 1.6;
+    }
+    .post a {
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .post a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -80,5 +109,45 @@
     <p>These are stories from the road: of parenting at a distance, finding stillness in the woods, and chasing reverence one muddy mile at a time.</p>
     <p>No filters. Just love, loss, laughter, and the long way home.</p>
   </div>
+
+  <!-- Blog Posts will be injected here -->
+  <section id="posts" class="posts"></section>
+
+  <!-- ===== Add new blog entries in the JSON below ===== -->
+  <script id="blogData" type="application/json">
+    [
+      {
+        "title": "Trip #7: Ohio in the Rear‑View",
+        "date": "2025‑05‑14",
+        "excerpt": "A 1,600‑mile blur of highway hymns, drive‑thru coffee, and four tiny voices singing along to the chorus.",
+        "url": "posts/trip‑7‑ohio.html"
+      },
+      {
+        "title": "Serenity",
+        "date": "2024‑12‑03",
+        "excerpt": "A poem written under a winter sky when the fire burned low and the path felt longest.",
+        "url": "posts/serenity.html"
+      }
+    ]
+  </script>
+
+  <script>
+    // Render posts from the JSON data
+    (function() {
+      const data = JSON.parse(document.getElementById('blogData').textContent);
+      const container = document.getElementById('posts');
+      data.forEach(post => {
+        const article = document.createElement('article');
+        article.className = 'post';
+        article.innerHTML = `
+          <h3>${post.title}</h3>
+          <small>${post.date}</small>
+          <p>${post.excerpt}</p>
+          ${post.url ? `<a href="${post.url}">Read more →</a>` : ''}
+        `;
+        container.appendChild(article);
+      });
+    })();
+  </script>
 </body>
 </html>
