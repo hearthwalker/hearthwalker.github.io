@@ -2,24 +2,71 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hearthwalker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hearthwalker – A Journal of the Road</title>
   <style>
     body {
-      background-color: #0d0d0d;
-      color: #eee;
-      font-family: 'Georgia', serif;
-      padding: 4rem;
+      margin: 0;
+      font-family: Georgia, serif;
+      background-color: #fdfaf6;
+      color: #2e2e2e;
+    }
+    header {
+      position: relative;
+      background: url('/assets/images/van-header.jpg') no-repeat center center/cover;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
     }
-    img {
-      max-width: 300px;
-      margin: 2rem auto;
+    header h1 {
+      font-size: 4rem;
+      color: white;
+      text-shadow: 0 4px 10px rgba(0,0,0,0.6);
+      margin: 0;
+    }
+    .intro {
+      max-width: 800px;
+      margin: 4rem auto;
+      padding: 0 1.5rem;
+      text-align: center;
+    }
+    .intro p {
+      font-size: 1.2rem;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #f39c12;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #f0eee9;
+      color: #555;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to Hearthwalker</h1>
-  <p>A home for stories, stillness, and sacred fire under open skies.</p>
-  <p>More coming soon…</p>
+  <header>
+    <h1>HEARTHWALKER</h1>
+  </header>
+  <div class="intro">
+    <h2>The Hearthwalker Blog</h2>
+    <p>Welcome to Hearthwalker — a journal of movement, memory, and meaning.</p>
+    <p>These are stories from the road: of parenting at a distance, finding stillness in the woods, and chasing reverence one muddy mile at a time.</p>
+    <p>No filters. Just love, loss, laughter, and the long way home.</p>
+    <a class="button" href="/posts/ohio-trip-8.html">Read the Latest Entry</a>
+  </div>
+  <footer>
+    <p>📬 Reach out: <a href="mailto:andy.grupp@gmail.com">andy.grupp@gmail.com</a></p>
+  </footer>
 </body>
 </html>
