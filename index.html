@@ -5,76 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hearthwalker</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Georgia, serif;
-      background: #fff;
-      color: #2e2e2e;
-    }
-    header {
-      background: #222;
-      color: white;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 1.5rem;
-    }
-    nav {
-      display: flex;
-      gap: 1rem;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .hero {
-      position: relative;
-      background: url('/assets/images/header.png') no-repeat center center/cover;
-      height: 75vh;
-    }
-    .overlay-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      max-width: 80%;
-      text-align: center;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
-    }
-    .overlay-text h2 {
-      margin: 0;
-      font-size: 3rem;
-      letter-spacing: 2px;
-    }
-    .overlay-text p {
-      margin-top: 1rem;
-      font-size: 1.2rem;
-      line-height: 1.5;
-    }
-    .hero-text {
-      position: absolute;
-      bottom: 1.5rem;
-      right: 1.5rem;
-      color: white;
-      font-size: 3rem;
-      font-weight: bold;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
-    }
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      background: #f0eee9;
-      color: #555;
-      font-size: 0.9rem;
+    /* -----------------  Base styles  ----------------- */
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Georgia,serif;background:#fff;color:#2e2e2e}
+
+    /* ----------  Sticky header / nav  ---------- */
+    header{background:#222;color:#fff;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
+    header h1{margin:0;font-size:1.5rem}
+    nav{display:flex;gap:1rem}
+    nav a{color:#fff;text-decoration:none;font-weight:bold;transition:color .2s}
+    nav a:hover{color:#f39c12}
+
+    /* ----------  Hero section  ---------- */
+    .hero{position:relative;background:url('/assets/images/header.png') no-repeat center center/cover;height:80vh;min-height:420px}
+    .overlay-text{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;max-width:80%;text-align:center;text-shadow:2px 2px 6px rgba(0,0,0,.7)}
+    .overlay-text h2{margin:0;font-size:3rem;letter-spacing:2px}
+    .overlay-text p{margin-top:1rem;font-size:1.2rem;line-height:1.5}
+    .hero-text{position:absolute;bottom:1.5rem;right:1.5rem;color:#fff;font-size:3rem;font-weight:bold;text-shadow:2px 2px 6px rgba(0,0,0,.7)}
+
+    /* ----------  Footer  ---------- */
+    footer{text-align:center;padding:2rem 1rem;background:#f0eee9;color:#555;font-size:.9rem}
+
+    /* ----------  Fluid text / word breaks  ---------- */
+    .intro,.overlay-text h2,.overlay-text p{word-break:break-word;hyphens:auto}
+
+    /* ----------  Mobile‑first tweaks  ---------- */
+    @media(max-width:720px){
+      /* 1) scale hero text */
+      .overlay-text h2{font-size:2.1rem}
+      .overlay-text p{font-size:1rem}
+      /* 2) gutter */
+      body,.intro{padding-left:1rem;padding-right:1rem}
+      /* 3) hide links, show hamburger */
+      nav a{display:none}
+      nav::before{content:"≡";font-size:1.6rem;cursor:pointer}
+      nav:hover a{display:block;background:#222;padding:.6rem 0;text-align:right}
+      nav{flex-direction:column;align-items:flex-end}
     }
   </style>
 </head>
@@ -93,9 +59,7 @@
   <section class="hero">
     <div class="overlay-text">
       <h2></h2>
-      <p>
-        Welcome to Hearthwalker — a quiet corner of the web for stories written by firelight, for early morning drives and late-night revelations, for the sacred, muddy road between who we’ve been and who we’re still becoming. This is where memory and movement meet.
-      </p>
+      <p>Welcome to Hearthwalker — a quiet corner of the web for stories written by firelight, for early morning drives and late‑night revelations, for the sacred, muddy road between who we’ve been and who we’re still becoming. This is where memory and movement meet.</p>
     </div>
     <div class="hero-text">HEARTHWALKER</div>
   </section>
