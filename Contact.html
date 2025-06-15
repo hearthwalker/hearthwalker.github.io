@@ -34,10 +34,6 @@
       text-decoration: none;
       color: white;
       font-weight: bold;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #f39c12;
     }
     .container {
       display: flex;
@@ -69,10 +65,18 @@
       max-width: 500px;
       border-radius: 8px;
     }
-    .form {
-      width: 100%;
-      max-width: 700px;
+    .form-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 2rem;
+      max-width: 1200px;
       margin: 2rem auto;
+      padding: 0 2rem;
+    }
+    .form-container {
+      flex: 1 1 400px;
     }
     form {
       display: flex;
@@ -84,6 +88,7 @@
       font-size: 1rem;
       border: 1px solid #ccc;
       border-radius: 5px;
+      width: 100%;
     }
     button {
       padding: 0.75rem;
@@ -93,6 +98,14 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
+    }
+    .form-image {
+      flex: 1 1 400px;
+    }
+    .form-image img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 8px;
     }
     footer {
       text-align: center;
@@ -125,13 +138,18 @@
       <img src="/assets/images/4cb9bf85-9f0b-4fd8-838d-b35cbe4d5b37.png" alt="Contact Van at Camp">
     </div>
   </div>
-  <div class="form">
-    <form name="contact" method="POST" data-netlify="true">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
+  <div class="form-section">
+    <div class="form-container">
+      <form name="contact" method="POST" data-netlify="true">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+    <div class="form-image">
+      <img src="/assets/images/contact.jpg" alt="Camp contact scenery">
+    </div>
   </div>
   <footer>
     <p>📬 Reach out: <a href="mailto:hearthwalker25@gmail.com">hearthwalker25@gmail.com</a></p>
