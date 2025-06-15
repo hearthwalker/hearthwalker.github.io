@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact – Hearthwalker</title>
   <style>
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: Georgia, serif;
@@ -22,29 +23,27 @@
       top: 0;
       z-index: 1000;
     }
-    header h1 {
-      margin: 0;
-      font-size: 1.5rem;
-    }
-    nav {
-      display: flex;
-      gap: 1rem;
-    }
+    header h1 { margin: 0; font-size: 1.5rem; }
+    nav { display: flex; gap: 1rem; }
     nav a {
-      text-decoration: none;
       color: white;
+      text-decoration: none;
       font-weight: bold;
+      transition: color 0.2s;
     }
+    nav a:hover { color: #f39c12; }
+
     .container {
       max-width: 1200px;
       margin: 2rem auto;
       padding: 0 2rem;
       display: flex;
+      flex-wrap: wrap;
       gap: 2rem;
       align-items: flex-start;
     }
     .info {
-      flex: 1;
+      flex: 1 1 400px;
     }
     .info h1 {
       font-size: 2.5rem;
@@ -55,10 +54,12 @@
       line-height: 1.6;
       margin-bottom: 1rem;
     }
+
     .form-wrapper {
-      flex: 1;
+      flex: 1 1 400px;
       display: flex;
       gap: 2rem;
+      align-items: flex-start;
     }
     .form-container {
       flex: 1;
@@ -83,9 +84,11 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      align-self: flex-start;
     }
     .side-image {
-      flex: 1;
+      flex: 1 1 400px;
+      height: auto;
     }
     .side-image img {
       width: 100%;
@@ -94,12 +97,10 @@
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
+
     @media (max-width: 800px) {
       .container, .form-wrapper {
         flex-direction: column;
-      }
-      .side-image {
-        height: auto;
       }
     }
     footer {
@@ -123,15 +124,16 @@
       <a href="support.html">Support the Journey</a>
     </nav>
   </header>
+
   <div class="container">
     <div class="info">
       <h1>Contact Me</h1>
-      <p>Whether you're a fellow parent, a wanderer, a kindred spirit, or someone who just wants to swap stories over a digital campfire — I’d love to hear from you. Drop a note, ask a question, or just say hi. Every message matters.</p>
+      <p>If something here moved you, or you just want to reach out — I’d love to hear from you. I may be slow to respond from a muddy camp or backroad, but I read everything.</p>
       <p>Email me directly at <a href="mailto:hearthwalker25@gmail.com">hearthwalker25@gmail.com</a>, or use the form below.</p>
     </div>
     <div class="form-wrapper">
       <div class="form-container">
-        <form action="https://formspree.io/f/xzzggaqy" method="POST">
+        <form action="https://formspree.io/f/yourFormID" method="POST">
           <input type="hidden" name="_subject" value="New message from Hearthwalker Contact">
           <input type="text" name="name" placeholder="Your Name" required>
           <input type="email" name="email" placeholder="Your Email" required>
@@ -140,10 +142,11 @@
         </form>
       </div>
       <div class="side-image">
-        <img src="/assets/images/contact.JPG" alt="Camp contact scenery">
+        <img src="/assets/images/contact.jpg" alt="Camp contact scenery">
       </div>
     </div>
   </div>
+
   <footer>
     <p>📬 Reach out: <a href="mailto:hearthwalker25@gmail.com">hearthwalker25@gmail.com</a></p>
   </footer>
