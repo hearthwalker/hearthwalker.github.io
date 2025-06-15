@@ -3,76 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hearthwalker</title>
+  <title>The Blog - Hearthwalker</title>
   <style>
     body {
-      margin: 0;
       font-family: Georgia, serif;
+      margin: 0;
+      padding: 0;
       background: #fff;
-      color: #2e2e2e;
+      color: #333;
     }
     header {
       background: #222;
       color: white;
-      padding: 2rem;
-      text-align: center;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
     }
     nav {
-      background: #f0eee9;
-      padding: 1rem;
-      text-align: center;
+      display: flex;
+      gap: 1rem;
     }
     nav a {
-      margin: 0 1rem;
       text-decoration: none;
-      color: #2c3e50;
+      color: white;
       font-weight: bold;
     }
     .hero {
-      background: url('/assets/images/HEARTHWALKER.png') no-repeat center center/cover;
-      height: 75vh;
+      background: url('assets/images/BlogHeader.jpg') no-repeat center center/cover;
+      height: 60vh;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       text-align: center;
+    }
+    .hero h2 {
       color: white;
       font-size: 3rem;
-      font-weight: bold;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.5);
     }
     .intro {
       max-width: 800px;
       margin: 2rem auto;
       padding: 1rem;
       font-size: 1.2rem;
-      line-height: 1.8;
-    }
-    footer {
+      line-height: 1.6;
       text-align: center;
-      padding: 2rem 1rem;
-      background: #f0eee9;
-      color: #555;
-      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <header>HEARTHWALKER</header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="Blog.html">The Blog</a>
-    <a href="about.html">About</a>
-    <a href="Contact.html">Contact</a>
-    <a href="support.html">Support the Journey</a>
-  </nav>
-  <section class="hero">
-    HEARTHWALKER
-  </section>
-  <div class="intro">
-    <p>Welcome to Hearthwalker — a quiet corner of the web for stories written by firelight, for early morning drives and late-night revelations, for the sacred, muddy road between who we’ve been and who we’re still becoming. This is where memory and movement meet.</p>
+  <header>
+    <h1>HEARTHWALKER</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="Blog.html">The Blog</a>
+      <a href="about.html">About</a>
+      <a href="Contact.html">Contact</a>
+      <a href="support.html">Support the Journey</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h2>THE HEARTHWALKER BLOG</h2>
   </div>
-  <footer>
-    <p>📬 Reach out: <a href="mailto:hearthwalker25@gmail.com">hearthwalker25@gmail.com</a></p>
-  </footer>
+
+  <div class="intro">
+    <p>Welcome to Hearthwalker — a journal of movement, memory, and meaning.</p>
+    <p>These are stories from the road: of parenting at a distance, finding stillness in the woods, and chasing reverence one muddy mile at a time.</p>
+    <p>No filters. Just love, loss, laughter, and the long way home.</p>
+  </div>
 </body>
 </html>
