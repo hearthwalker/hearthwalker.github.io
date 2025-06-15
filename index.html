@@ -36,12 +36,14 @@
       font-weight: bold;
     }
     .hero {
+      position: relative;
       background: url('/assets/images/header.png') no-repeat center center/cover;
       height: 75vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+    }
+    .hero-text {
+      position: absolute;
+      bottom: 1.5rem;
+      right: 1.5rem;
       color: white;
       font-size: 3rem;
       font-weight: bold;
@@ -75,7 +77,7 @@
     </nav>
   </header>
   <section class="hero">
-    HEARTHWALKER
+    <div class="hero-text">HEARTHWALKER</div>
   </section>
   <div class="intro">
     <p>Welcome to Hearthwalker — a quiet corner of the web for stories written by firelight, for early morning drives and late-night revelations, for the sacred, muddy road between who we’ve been and who we’re still becoming. This is where memory and movement meet.</p>
