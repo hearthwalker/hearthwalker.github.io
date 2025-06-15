@@ -3,56 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Support the Journey – Hearthwalker</title>
-  <style>
+  <title>Support the Journey – Hearthwalker</n  <style>
     body {
       margin: 0;
       font-family: Georgia, serif;
-      background-color: #fdfaf6;
-      color: #2e2e2e;
-      position: relative;
-    }
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background: url('/assets/images/support.jpg') no-repeat center center/cover;
-      opacity: 0.15;
-      z-index: -1;
+      background: #fff;
+      color: #333;
     }
     header {
       background: #222;
       color: white;
-      padding: 2rem;
-      text-align: center;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-    .container {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1.5rem;
-      background-color: rgba(253, 250, 246, 0.95);
-      border-radius: 10px;
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
     }
-    .container h2 {
-      text-align: center;
-      margin-bottom: 1.5rem;
+    nav {
+      display: flex;
+      gap: 1rem;
     }
-    .support-links {
-      text-align: center;
-      margin-top: 2rem;
-    }
-    .support-links a {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #2c3e50;
+    nav a {
       color: white;
       text-decoration: none;
-      border-radius: 5px;
       font-weight: bold;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #f39c12;
+    }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      line-height: 1.6;
+    }
+    .buttons {
+      margin: 2rem 0;
+      display: flex;
+      gap: 1rem;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: #2c3e50;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.2s;
+    }
+    .button:hover {
+      background: #4a6572;
     }
     footer {
       text-align: center;
@@ -66,23 +76,29 @@
 </head>
 <body>
   <header>
-    <h1>Support the Journey</h1>
+    <h1>HEARTHWALKER</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="Blog.html">The Blog</a>
+      <a href="about.html">About</a>
+      <a href="Contact.html">Contact</a>
+      <a href="support.html">Support the Journey</a>
+    </nav>
   </header>
-  <div class="container">
+  <main>
+    <h2>Support the Journey</h2>
     <p>This road isn’t easy, but it’s sacred.</p>
-
     <p><strong>Hearthwalker</strong> is a labor of love — stories written by firelight, photos snapped between goodbyes and reunions, and quiet moments captured from a van that’s seen it all.</p>
-
     <p>I drive thousands of miles to stay connected to my kids, to nature, and to something that feels like truth. If my words have moved you — or if you just want to help keep this old van rolling — here’s how you can support the journey:</p>
-
-    <div class="support-links">
-      <a href="https://venmo.com/northforest" target="_blank">💸 Venmo: @northforest</a>
-      <a href="https://paypal.me/northernforests" target="_blank">🪵 PayPal</a>
+    <div class="buttons">
+      <a class="button" href="https://venmo.com/northforest" target="_blank">💎 Venmo: @northforest</a>
+      <a class="button" href="https://paypal.me/northernforests" target="_blank">🤲 PayPal</a>
     </div>
-
-    <p style="margin-top: 2rem;">Every contribution helps with gas, groceries, campsite fees, and the gear it takes to keep showing up and telling these stories.</p>
-
+    <p>Every contribution helps with gas, groceries, campsite fees, and the gear it takes to keep showing up and telling these stories.</p>
     <p>Thank you for being part of this fire. For reading. For caring. For walking with me.</p>
-  </div>
+  </main>
+  <footer>
+    <p>📬 Reach out: <a href="mailto:hearthwalker25@gmail.com">hearthwalker25@gmail.com</a></p>
+  </footer>
 </body>
 </html>
