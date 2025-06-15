@@ -5,15 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Support the Journey – Hearthwalker</title>
   <style>
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: Georgia, serif;
-      background: #fff;
       color: #333;
+      background: #fff;
     }
     header {
       background: #222;
-      color: white;
+      color: #fff;
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
@@ -22,60 +23,72 @@
       top: 0;
       z-index: 1000;
     }
-    header h1 {
-      margin: 0;
-      font-size: 1.5rem;
-    }
-    nav {
-      display: flex;
-      gap: 1rem;
-    }
+    header h1 { margin: 0; font-size: 1.5rem; }
+    nav { display: flex; gap: 1rem; }
     nav a {
-      color: white;
+      color: #fff;
       text-decoration: none;
       font-weight: bold;
-      transition: color 0.2s;
+      transition: color .2s;
     }
-    nav a:hover {
-      color: #f39c12;
+    nav a:hover { color: #f39c12; }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 60vh;
+      background: url('/assets/images/support.jpg') no-repeat center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    main {
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255,255,255,0.6);
+    }
+    .hero-text {
+      position: relative;
       max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      line-height: 1.6;
+      text-align: center;
+      padding: 2rem;
     }
-    h2 {
-      font-size: 2rem;
+    .hero-text h2 {
+      font-size: 2.5rem;
       margin-bottom: 1rem;
+    }
+    .hero-text p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin: .5rem 0;
     }
     .buttons {
       margin: 2rem 0;
       display: flex;
       gap: 1rem;
+      justify-content: center;
       flex-wrap: wrap;
     }
     .button {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      padding: 0.75rem 1.5rem;
+      gap: .5rem;
+      padding: .75rem 1.5rem;
       background: #2c3e50;
-      color: white;
+      color: #fff;
       border-radius: 5px;
       text-decoration: none;
       font-weight: bold;
-      transition: background 0.2s;
+      transition: background .2s;
     }
-    .button:hover {
-      background: #4a6572;
-    }
+    .button:hover { background: #4a6572; }
     footer {
       text-align: center;
       padding: 2rem 1rem;
       background: #f0eee9;
       color: #555;
-      font-size: 0.9rem;
+      font-size: .9rem;
       margin-top: 4rem;
     }
   </style>
@@ -91,13 +104,22 @@
       <a href="support.html">Support the Journey</a>
     </nav>
   </header>
-  <main>
-    <h2>Support the Journey</h2>
-    <p>This road isn’t easy, but it’s sacred.</p>
-    <p><strong>Hearthwalker</strong> is a labor of love — stories written by firelight, photos snapped between goodbyes and reunions, and quiet moments captured from a van that’s seen it all.</p>
-    <p>I drive thousands of miles to stay connected to my kids, to nature, and to something that feels like truth. If my words have moved you — or if you just want to help keep this old van rolling — here’s how you can support the journey:</p>
-    <div class="buttons">
-      <a class="button" href="https://venmo.com/northforest" target="_blank">💎 Venmo: @northforest</a>
-      <a class="button" href="https://paypal.me/northernforests" target="_blank">🤲 PayPal</a>
+  <section class="hero">
+    <div class="hero-text">
+      <h2>SUPPORT THE JOURNEY</h2>
+      <p>This road isn’t easy — but it’s sacred.</p>
+      <p><strong>Hearthwalker</strong> is a labor of love — stories written by firelight, photos snapped between goodbyes and reunions, and quiet moments captured from a van that’s seen it all.</p>
+      <p>I drive thousands of miles to stay connected to my kids, to nature, and to something that feels like truth. If anything here has moved you — or if you just want to help keep this old van rolling — here’s how you can support the journey:</p>
+      <div class="buttons">
+        <a class="button" href="https://venmo.com/northforest" target="_blank">💎 Venmo: @northforest</a>
+        <a class="button" href="https://paypal.me/northernforests" target="_blank">🤲 PayPal: paypal.me/northernforests</a>
+      </div>
+      <p>Every contribution helps with gas, groceries, campsite fees, and the gear it takes to keep showing up and telling these stories.</p>
+      <p>Thank you for being part of this fire. For reading. For caring. For walking with me.</p>
     </div>
-    <p>Every contribution helps with gas, groceries, campsite fees, and the gear it takes to keep s
+  </section>
+  <footer>
+    <p>📬 Reach out: <a href="mailto:hearthwalker25@gmail.com">hearthwalker25@gmail.com</a></p>
+  </footer>
+</body>
+</html>
