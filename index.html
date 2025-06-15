@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact – Hearthwalker</title>
+  <title>Hearthwalker</title>
   <style>
     body {
       margin: 0;
       font-family: Georgia, serif;
-      background-color: #f5f5f5;
+      background: #fff;
       color: #2e2e2e;
     }
     header {
@@ -20,7 +20,7 @@
       align-items: center;
       position: sticky;
       top: 0;
-      z-index: 1000;
+      z-index: 100;
     }
     header h1 {
       margin: 0;
@@ -31,68 +31,43 @@
       gap: 1rem;
     }
     nav a {
-      text-decoration: none;
       color: white;
+      text-decoration: none;
       font-weight: bold;
     }
-    .container {
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 0 2rem;
+    .hero {
+      position: relative;
+      background: url('/assets/images/header.png') no-repeat center center/cover;
+      height: 75vh;
     }
-    .hero-image {
-      width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      margin-bottom: 2rem;
-    }
-    .info {
-      margin-bottom: 2rem;
-    }
-    .info h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    .info p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      margin-bottom: 1rem;
-    }
-    .form-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      align-items: flex-start;
-    }
-    .form-wrapper form {
-      flex: 1 1 400px;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    input, textarea {
-      padding: 0.75rem;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      width: 100%;
-    }
-    button {
-      padding: 0.75rem;
-      font-size: 1rem;
-      background-color: #2c3e50;
+    .overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
+      max-width: 80%;
+      text-align: center;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
     }
-    .side-image {
-      flex: 1 1 400px;
+    .overlay-text h2 {
+      margin: 0;
+      font-size: 3rem;
+      letter-spacing: 2px;
     }
-    .side-image img {
-      width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    .overlay-text p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      line-height: 1.5;
+    }
+    .hero-text {
+      position: absolute;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      color: white;
+      font-size: 3rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
     }
     footer {
       text-align: center;
@@ -100,7 +75,6 @@
       background: #f0eee9;
       color: #555;
       font-size: 0.9rem;
-      margin-top: 4rem;
     }
   </style>
 </head>
@@ -115,23 +89,17 @@
       <a href="support.html">Support the Journey</a>
     </nav>
   </header>
-  <div class="container">
-    <img class="hero-image" src="/assets/images/contact.jpg" alt="Contact Scenery">
-    <div class="info">
-      <h1>Contact Me</h1>
-      <p>If something here moved you, or you just want to reach out — I’d love to hear from you. I may be slow to respond from a muddy camp or backroad, but I read everything.</p>
-      <p>Email me directly at <a href="mailto:hearthwalker25@gmail.com">hearthwalker25@gmail.com</a>, or use the form below.</p>
+
+  <section class="hero">
+    <div class="overlay-text">
+      <h2>FOLLOW THE JOURNEY</h2>
+      <p>
+        Welcome to Hearthwalker — a quiet corner of the web for stories written by firelight, for early morning drives and late-night revelations, for the sacred, muddy road between who we’ve been and who we’re still becoming. This is where memory and movement meet.
+      </p>
     </div>
-    <div class="form-wrapper">
-      <form action="https://formspree.io/f/yourFormID" method="POST">
-        <input type="hidden" name="_subject" value="New message from Hearthwalker Contact">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </div>
-  </div>
+    <div class="hero-text">HEARTHWALKER</div>
+  </section>
+
   <footer>
     <p>📬 Reach out: <a href="mailto:hearthwalker25@gmail.com">hearthwalker25@gmail.com</a></p>
   </footer>
