@@ -12,11 +12,32 @@
       color: #2e2e2e;
     }
     header {
-      padding: 2rem;
-      background: #fff;
-      text-align: center;
-      font-weight: bold;
+      background: #222;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      margin: 0;
       font-size: 1.5rem;
+    }
+    nav {
+      display: flex;
+      gap: 1rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #f39c12;
     }
     .container {
       display: flex;
@@ -85,7 +106,14 @@
 </head>
 <body>
   <header>
-    HEARTHWALKER
+    <h1>HEARTHWALKER</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="Blog.html">The Blog</a>
+      <a href="about.html">About</a>
+      <a href="Contact.html">Contact</a>
+      <a href="support.html">Support the Journey</a>
+    </nav>
   </header>
   <div class="container">
     <div class="info">
