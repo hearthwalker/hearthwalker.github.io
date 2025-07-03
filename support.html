@@ -19,17 +19,23 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
       position: sticky;
       top: 0;
       z-index: 1000;
     }
-    header h1 { margin: 0; font-size: 1.5rem; }
-    nav { display: flex; gap: 1rem; }
+    header h1 { margin: 0; font-size: 1.8rem; }
+    nav {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
     nav a {
       color: #fff;
       text-decoration: none;
       font-weight: bold;
       transition: color .2s;
+      font-size: 0.95rem;
     }
     nav a:hover { color: #f39c12; }
 
@@ -41,31 +47,28 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 1rem;
     }
-    /* REMOVED the ::after overlay - no longer needed */
-    
     .hero-text {
       position: relative;
       max-width: 800px;
       text-align: center;
       padding: 2rem;
-      color: #fff; /* Bright white text */
-      /* Added semi-transparent dark background */
-      background: rgba(0, 0, 0, 0.7); /* 70% opacity dark background */
-      border-radius: 8px; /* Softened corners */
-      /* Optional: Add subtle shadow for depth */
+      color: #fff;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.25);
     }
     .hero-text h2 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
-      color: #fff; /* Ensure heading is white */
+      color: #fff;
     }
     .hero-text p {
       font-size: 1.1rem;
       line-height: 1.6;
       margin: .5rem 0;
-      color: #fff; /* Ensure paragraphs are white */
+      color: #fff;
     }
     .buttons {
       margin: 2rem 0;
@@ -85,6 +88,7 @@
       text-decoration: none;
       font-weight: bold;
       transition: background .2s;
+      white-space: nowrap;
     }
     .button:hover { background: #4a6572; }
     footer {
@@ -94,6 +98,46 @@
       color: #555;
       font-size: .9rem;
       margin-top: 4rem;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      header {
+        padding: 1rem;
+      }
+      header h1 {
+        font-size: 1.5rem;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0.5rem;
+      }
+      nav {
+        justify-content: center;
+        width: 100%;
+      }
+      nav a {
+        font-size: 0.9rem;
+      }
+      .hero {
+        height: 40vh;
+      }
+      .hero-text {
+        padding: 1rem;
+      }
+      .hero-text h2 {
+        font-size: 2rem;
+      }
+      .hero-text p {
+        font-size: 1rem;
+      }
+      .buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      .button {
+        width: 100%;
+        justify-content: center;
+      }
     }
   </style>
 </head>
@@ -112,8 +156,8 @@
     <div class="hero-text">
       <h2>SUPPORT THE JOURNEY</h2>
       <p>This road isn’t easy — but it’s sacred.</p>
-<p><strong>Hearthwalker</strong> is a love letter to the road — a collection of stories told by firelight, snapshots caught between tearful goodbyes and joyful reunions, and still moments beside a van that’s weathered every kind of storm.</p>
-<p>I log thousands of miles chasing connection — with my kids, with the wild, and with whatever truth lives out past the cell signal. If something here resonates with you — or if you just want to help keep this journey going — here’s how to lend a hand:</p>
+      <p><strong>Hearthwalker</strong> is a love letter to the road — a collection of stories told by firelight, snapshots caught between tearful goodbyes and joyful reunions, and still moments beside a van that’s weathered every kind of storm.</p>
+      <p>I log thousands of miles chasing connection — with my kids, with the wild, and with whatever truth lives out past the cell signal. If something here resonates with you — or if you just want to help keep this journey going — here’s how to lend a hand:</p>
       <div class="buttons">
         <a class="button" href="https://venmo.com/northforest" target="_blank">💎 Venmo: @northforest</a>
         <a class="button" href="https://paypal.me/northernforests" target="_blank">🤲 PayPal: paypal.me/northernforests</a>
